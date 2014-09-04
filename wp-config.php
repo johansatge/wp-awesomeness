@@ -17,26 +17,7 @@
  * @package WordPress
  */
 
-// ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
-/** Nom de la base de données de WordPress. */
-define('DB_NAME', 'wordpress');
-
-/** Utilisateur de la base de données MySQL. */
-define('DB_USER', 'root');
-
-/** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', 'root');
-
-/** Adresse de l'hébergement MySQL. */
-define('DB_HOST', '127.0.0.1');
-
-/** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
-define('DB_CHARSET', 'utf8');
-
-/** Type de collation de la base de données. 
-  * N'y touchez que si vous savez ce que vous faites. 
-  */
-define('DB_COLLATE', '');
+require_once 'config/config.php';
 
 /**#@+
  * Clefs uniques d'authentification et salage.
@@ -67,27 +48,6 @@ define('NONCE_SALT',       '7cV=qr}j+>:fyr{0w;29<v]cNbG{hV&7-alo[2pywSByOb3j5/L-
  * N'utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés!
  */
 $table_prefix  = 'wp_';
-
-/**
- * Langue de localisation de WordPress, par défaut en Anglais.
- *
- * Modifiez cette valeur pour localiser WordPress. Un fichier MO correspondant
- * au langage choisi doit être installé dans le dossier wp-content/languages.
- * Par exemple, pour mettre en place une traduction française, mettez le fichier
- * fr_FR.mo dans wp-content/languages, et réglez l'option ci-dessous à "fr_FR".
- */
-define('WPLANG', 'fr_FR');
-
-/** 
- * Pour les développeurs : le mode deboguage de WordPress.
- * 
- * En passant la valeur suivante à "true", vous activez l'affichage des
- * notifications d'erreurs pendant votre essais.
- * Il est fortemment recommandé que les développeurs d'extensions et
- * de thèmes se servent de WP_DEBUG dans leur environnement de 
- * développement.
- */ 
-define('WP_DEBUG', false); 
 
 /* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */
 
