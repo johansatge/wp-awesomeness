@@ -1,4 +1,3 @@
-wp-bootstrap
-============
+# WP Bootstrap
 
-A sample Wordpress installation - WIP
+My sample Wordpress installation.

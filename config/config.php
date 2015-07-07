@@ -30,3 +30,13 @@ if (!$config_found)
 {
     exit('<!-- Config file not found! -->');
 }
+
+if (!function_exists('printr'))
+{
+    function printr($stuff)
+    {
+        echo '<pre>';
+        print_r($stuff);
+        echo '</pre>';
+    }
+}
