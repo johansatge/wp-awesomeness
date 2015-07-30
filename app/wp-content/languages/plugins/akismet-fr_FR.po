@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1000\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
 "Project-Id-Version: Development\n"
 
 #: views/notice.php:98
@@ -491,7 +491,7 @@ msgstr "Akismet a validé ce commentaire suite à une revérification automatiqu
 msgid "View comment history"
 msgstr "Voir l&rsquo;historique du commentaire"
 
-#. #-#-#-#-#  akismet.pot (Akismet 3.1.3a1)  #-#-#-#-#
+#. #-#-#-#-#  akismet.pot (Akismet 3.1.4a1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: class.akismet-admin.php:76 class.akismet-admin.php:78
 #: class.akismet-admin.php:842 views/config.php:3
