@@ -9,7 +9,7 @@ foreach ($hosts as $host_path)
     {
         foreach ($domains as $domain)
         {
-            if (preg_match('#^' . preg_quote($domain) . '$#i', $_SERVER['HTTP_HOST']))
+            if (!empty($_SERVER['HTTP_HOST']) && preg_match('#^' . preg_quote($domain) . '$#i', $_SERVER['HTTP_HOST']))
             {
                 $config_path = str_replace('config/host', 'config/config', $host_path);
                 if (is_readable($config_path))
@@ -25,6 +25,11 @@ foreach ($hosts as $host_path)
     {
         break;
     }
+}
+if (php_sapi_name() === 'cli')
+{
+    require_once rtrim(dirname(__FILE__), '/') . '/config/local.php';
+    $config_found = true;
 }
 if (!$config_found)
 {
