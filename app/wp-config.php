@@ -6,6 +6,7 @@ preg_replace_callback('/^([A-Z0-9_]+)=(.*)\n?/m', function ($matches)
     define($matches[1], $matches[2]);
 }, is_readable(ENV_PATH) ? file_get_contents(ENV_PATH) : '');
 
+define('DISALLOW_FILE_MODS', true);
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 define('WPLANG', 'en_US');
