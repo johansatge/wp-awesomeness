@@ -1,9 +1,10 @@
 <?php
 
+define('ENV_PATH', rtrim(dirname(__FILE__), DIRECTORY_SEPARATOR) . '/.environment');
 preg_replace_callback('/^([A-Z0-9_]+)=(.*)\n?/m', function ($matches)
 {
     define($matches[1], $matches[2]);
-}, is_readable('.environment') ? file_get_contents('.environment') : '');
+}, is_readable(ENV_PATH) ? file_get_contents(ENV_PATH) : '');
 
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
