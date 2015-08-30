@@ -1,8 +1,6 @@
 # Wordpress awesomeness
 
-* [Configuring Apache](#configuring-apache)
-* [Working with multiple environments](#working-with-multiple-environments)
-* [Securing the Wordpress files](#securing-the-wordpress-files)
+My sample Wordpress installation.
 
 ## Configuring Apache
 
@@ -54,20 +52,3 @@ NONCE_SALT=xxxxx
 The file is loaded in [`wp-config.php`](app/wp-config.php).
 
 Security keys can be generated [here](https://api.wordpress.org/secret-key/1.1/salt/), and should be unique for each project and environment.
-
-## Securing the Wordpress files
-
-When using a VCS we may not want the Wordpress files to be edited.
-
-Manual edition of files in `wp-admin` can be blocked this way:
-
-```php
-define('DISALLOW_FILE_EDIT', true);
-```
-
-Or, we may want to completely block file edition, including Wordpress updates:
-
-```php
-define('DISALLOW_FILE_MODS', true);
-```
-
