@@ -1,6 +1,6 @@
 ![Logo](logo.png)
 
-WordPress sample installation & resources
+WordPress sample installation & resources.
 
 ---
 
