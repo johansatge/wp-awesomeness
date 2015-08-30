@@ -1,20 +1,37 @@
 # Wordpress awesomeness
 
-My sample Wordpress installation.
+WordPress sample installation & resources
 
-## Configuring Apache
+---
 
-### Modules
+* [Apache configuration](#apache-configuration)
+* [WordPress configuration](#wordpress-configuration)
+* [Plugins](#plugins)
+* [Online tools](#online-tools)
 
-The following modules should be enabled for Wordpress to work properly.
+## Apache configuration
 
-* `php5_module` (`libexec/apache2/libphp5.so`)
-* `headers_module` (`libexec/apache2/mod_headers.so`)
-* `rewrite_module` (`libexec/apache2/mod_rewrite.so`)
+### Mandatory modules
+
+| Module | Path | Description |
+| --- | --- | --- |
+| `php5_module` | `libexec/apache2/libphp5.so` | PHP support |
+| `rewrite_module` | `libexec/apache2/mod_rewrite.so` | URL rewriting support |
+
+### Additional modules
+
+| Module | Path | Description |
+| --- | --- | --- |
+| `ssl_module` | `libexec/apache2/mod_ssl.so` | HTTPS support |
+| `env_module` | `libexec/apache2/mod_env.so` | Environment variables support |
+| `dir_module` | `libexec/apache2/mod_dir.so` | Configuration of directory index files |
+| `mime_module` | `libexec/apache2/mod_mime.so` | Association between file extensions and mime types |
+| `auth_basic_module` | `libexec/apache2/mod_auth_basic.so` | HTTP authentication |
 
 ### Virtual host
 
-Basic virtual host sample, with `.htaccess` support roughly enabled, and disabled directory indexing.
+* Support of `.htaccess` enabled
+* Directory indexing disabled
 
 ```
 <VirtualHost *:80>
@@ -27,28 +44,34 @@ Basic virtual host sample, with `.htaccess` support roughly enabled, and disable
 </VirtualHost>
 ```
 
-## Working with multiple environments
+## WordPress configuration
 
-Environment variables, such as `DB_NAME` or `DB_PASSWORD`, should not be shared nor present in the project source files.
+Enabling PHP notices
 
-The sample installation uses a *git-ignored* `.environment` file, that must be created in the `app` directory, and filled like below:
-
-```
-DB_HOST=mysql
-DB_NAME=wp_awesomeness
-DB_USER=root
-DB_PASSWORD=root
-WP_DEBUG=1
-AUTH_KEY=xxxxx
-SECURE_AUTH_KEY=xxxxx
-LOGGED_IN_KEY=xxxxx
-NONCE_KEY=xxxxx
-AUTH_SALT=xxxxx
-SECURE_AUTH_SALT=xxxxx
-LOGGED_IN_SALT=xxxxx
-NONCE_SALT=xxxxx
+```php
+error_reporting(-1);
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', true);
 ```
 
-The file is loaded in [`wp-config.php`](app/wp-config.php).
+Disabling user file modifications
 
-Security keys can be generated [here](https://api.wordpress.org/secret-key/1.1/salt/), and should be unique for each project and environment.
+```php
+define('DISALLOW_FILE_EDIT', true);
+```
+
+Disabling all file modifications (including core updates, etc)
+
+```php
+define('DISALLOW_FILE_MODS', true);
+```
+
+## Plugins
+
+* [query-monitor](https://github.com/johnbillion/query-monitor) - Monitoring database queries, hooks, conditionals, HTTP requests, query vars, environment, redirects, and more
+* [http-auth](https://github.com/johansatge/http-auth) - HTTP auth management
+
+## Online tools
+
+* [secret-keys](https://api.wordpress.org/secret-key/1.1/salt/) - Online secret keys generator
+* [GenerateWP](https://generatewp.com/) - Code generators
