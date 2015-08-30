@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(-1);
+
 define('ENV_PATH', rtrim(dirname(__FILE__), DIRECTORY_SEPARATOR) . '/.environment');
 preg_replace_callback('/^([A-Z0-9_]+)=(.*)\n?/m', function ($matches)
 {
@@ -10,6 +12,8 @@ define('DISALLOW_FILE_MODS', true);
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 define('WPLANG', 'en_US');
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', true);
 
 $table_prefix  = 'wp_';
 
