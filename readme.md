@@ -1,4 +1,4 @@
-# Wordpress awesomeness
+![Logo](logo.png)
 
 WordPress sample installation & resources
 
