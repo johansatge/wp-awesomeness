@@ -70,6 +70,7 @@ define('DISALLOW_FILE_MODS', true);
 
 * [query-monitor](https://github.com/johnbillion/query-monitor) - Monitoring database queries, hooks, conditionals, HTTP requests, query vars, environment, redirects, and more
 * [http-auth](https://github.com/johansatge/http-auth) - HTTP auth management
+* [ip-restrictions](https://github.com/johansatge/ip-restrictions) - IP restrictions management
 
 ## Online tools
 
