@@ -15,13 +15,16 @@ define('WPLANG', 'en_US');
 define('WP_DEBUG', true);
 define('WP_DEBUG_DISPLAY', true);
 
+define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
+define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
+
 $table_prefix  = 'wp_';
 
 /* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */
 
 /** Chemin absolu vers le dossier de WordPress. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+	define('ABSPATH', dirname(__FILE__) . '/wp/');
 
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once(ABSPATH . 'wp-settings.php');
