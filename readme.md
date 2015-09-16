@@ -1,13 +1,11 @@
 ![Logo](logo.png)
 
-WordPress sample installation & resources.
+WordPress sample installation.
 
 ---
 
 * [Apache configuration](#apache-configuration)
 * [WordPress configuration](#wordpress-configuration)
-* [Plugins](#plugins)
-* [Online tools](#online-tools)
 
 ## Apache configuration
 
@@ -43,36 +41,3 @@ WordPress sample installation & resources.
     </Directory>
 </VirtualHost>
 ```
-
-## WordPress configuration
-
-Enabling PHP notices
-
-```php
-error_reporting(-1);
-define('WP_DEBUG', true);
-define('WP_DEBUG_DISPLAY', true);
-```
-
-Disabling user file modifications
-
-```php
-define('DISALLOW_FILE_EDIT', true);
-```
-
-Disabling all file modifications (including core updates, etc)
-
-```php
-define('DISALLOW_FILE_MODS', true);
-```
-
-## Plugins
-
-* [query-monitor](https://github.com/johnbillion/query-monitor) - Monitoring database queries, hooks, conditionals, HTTP requests, query vars, environment, redirects, and more
-* [http-auth](https://github.com/johansatge/http-auth) - HTTP auth management
-* [ip-restrictions](https://github.com/johansatge/ip-restrictions) - IP restrictions management
-
-## Online tools
-
-* [secret-keys](https://api.wordpress.org/secret-key/1.1/salt/) - Online secret keys generator
-* [GenerateWP](https://generatewp.com/) - Code generators
