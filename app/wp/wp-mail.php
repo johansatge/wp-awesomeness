@@ -22,7 +22,7 @@ if ( ! apply_filters( 'enable_post_by_email_configuration', true ) )
 do_action( 'wp-mail.php' );
 
 /** Get the POP3 class with which to access the mailbox. */
-require_once(ABSPATH . WPINC . '/class-pop3.php');
+require_once( ABSPATH . WPINC . '/class-pop3.php' );
 
 /** Only check at this interval for new messages. */
 if ( !defined('WP_MAIL_INTERVAL') )

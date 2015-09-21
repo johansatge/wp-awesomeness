@@ -1,7 +1,7 @@
 <?php
 
 /** Sets up the WordPress Environment. */
-require(dirname(__FILE__) . '/wp-load.php');
+require( dirname(__FILE__) . '/wp-load.php' );
 
 add_action( 'wp_head', 'wp_no_robots' );
 
