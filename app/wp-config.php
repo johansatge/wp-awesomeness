@@ -28,7 +28,13 @@ $GLOBALS['table_prefix'] = 'wp_';
  */
 define('DISALLOW_FILE_MODS', true);
 define('WP_CONTENT_DIR', dirname(__FILE__) . '/content');
-define('WP_CONTENT_URL', !empty($_SERVER['HTTP_HOST']) ? 'http://' . $_SERVER['HTTP_HOST'] . '/content' : '/content');
+define('WP_CONTENT_URL', !empty($_SERVER['SERVER_NAME']) ? 'http://' . $_SERVER['SERVER_NAME'] . '/content' : '/content');
+
+/**
+ * Site URL
+ */
+define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp');
+define('WP_HOME', 'http://' . $_SERVER['SERVER_NAME']);
 
 /**
  * Boot
