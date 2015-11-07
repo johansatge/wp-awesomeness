@@ -6,6 +6,13 @@ WordPress sample installation.
 
 * [Apache configuration](#apache-configuration)
 * [Plugins](#plugins)
+    * [`disable-comments.php`](#disable-commentsphp)
+    * [`disable-emojis.php`](#disable-emojisphp)
+    * [`http-auth.php`](#http-authphp)
+    * [`ip-restrictions.php`](#ip-restrictionsphp)
+    * [`jquery-to-footer.php`](#jquery-to-footerphp)
+    * [`mandatory-plugins.php`](#mandatory-pluginsphp)
+    * [`roles-loader.php`](#roles-loaderphp)
 
 ## Apache configuration
 
