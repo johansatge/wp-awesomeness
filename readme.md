@@ -5,7 +5,7 @@ WordPress sample installation.
 ---
 
 * [Apache configuration](#apache-configuration)
-* [WordPress configuration](#wordpress-configuration)
+* [Plugins](#plugins)
 
 ## Apache configuration
 
@@ -41,3 +41,17 @@ WordPress sample installation.
     </Directory>
 </VirtualHost>
 ```
+
+## Plugins
+
+### `disable-comments.php`
+
+The plugin does the following:
+
+* Closes comments and pings for all posts
+* Removes the comments bubble from the [Admin Bar](https://codex.wordpress.org/Toolbar)
+* Disables the `X-Pingback` HTTP header
+* Disables the `pingback.ping` method from [XMLRPC](https://codex.wordpress.org/XML-RPC_Support)
+* Removes entries from the admin menu:
+    * Comments
+    * Settings > Discussion
